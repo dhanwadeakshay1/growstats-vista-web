@@ -1,16 +1,4 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import PageHeader from "@/components/ui/PageHeader";
-
-const Careers = () => {
-  return (
-    <div>
-      <PageHeader 
-        title="Careers at GrowStats Media" 
-        subtitle="Empowering Digital Growth Through Talent" 
-      />
-      
       <section className="section bg-gradient-to-r from-growstats-red to-growstats-purple text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-6 text-white">
@@ -29,10 +17,3 @@ const Careers = () => {
           </Button>
         </div>
       </section>
-
-      {/* Additional career sections can be added here */}
-    </div>
-  );
-};
-
-export default Careers;
