@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -35,9 +34,11 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-transparent"}`}>
       <nav className="container-custom flex items-center justify-between py-4">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-growstats-700 to-accent-600">
-            GrowStats
-          </span>
+          <img 
+            src="/logo.png" 
+            alt="Growstats Media Logo" 
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}

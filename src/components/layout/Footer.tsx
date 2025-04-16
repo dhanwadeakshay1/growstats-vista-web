@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
@@ -11,9 +10,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-growstats-700 to-accent-600">
-                GrowStats
-              </span>
+              <img 
+                src="/logo.png" 
+                alt="Growstats Media Logo" 
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted-foreground mb-4">
               Empowering businesses with cutting-edge digital marketing solutions and web development services.
