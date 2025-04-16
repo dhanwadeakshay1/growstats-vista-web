@@ -1,6 +1,6 @@
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import PageHeader from '../components/ui/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
@@ -9,16 +9,11 @@ import { Briefcase, Clock, MapPin, ArrowRight } from 'lucide-react';
 const Careers = () => {
   return (
     <Layout>
-      <PageHeader 
-        title="" 
-        subtitle=""
-      />
-
-      <section className="section bg-gradient-to-r from-growstats-red to-growstats-purple text-white">
+      <section className="bg-gradient-to-r from-growstats-red to-growstats-purple text-white py-16 md:py-20">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-6 text-white">
-            Ready to Join Our Team?
-          </h2>
+          <h1 className="text-3xl md:text-5xl font-bold font-display mb-6 text-white">
+            Careers at GrowStats Media
+          </h1>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Explore our current openings and take the next step in your career journey with GrowStats Media. 
             We're always looking for talented individuals who are passionate about digital marketing and web development.
@@ -33,36 +28,37 @@ const Careers = () => {
         </div>
       </section>
       
-      <section className="section bg-gray-50 py-16">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold font-display mb-8 text-center">Why Work With Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-growstats-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Briefcase className="text-growstats-red" size={28} />
+              <div className="w-14 h-14 bg-growstats-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Briefcase className="text-growstats-red" size={24} />
               </div>
               <h3 className="font-bold text-lg mb-2">Competitive Salary</h3>
               <p className="text-gray-600">We offer competitive compensation packages aligned with industry standards</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-growstats-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-growstats-blue" size={28} />
+              <div className="w-14 h-14 bg-growstats-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="text-growstats-blue" size={24} />
               </div>
               <h3 className="font-bold text-lg mb-2">Work-Life Balance</h3>
               <p className="text-gray-600">Flexible working hours and remote work options to suit your lifestyle</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-growstats-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="text-growstats-green" size={28} />
+              <div className="w-14 h-14 bg-growstats-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="text-growstats-green" size={24} />
               </div>
               <h3 className="font-bold text-lg mb-2">Prime Location</h3>
               <p className="text-gray-600">Modern office spaces in convenient locations with great amenities</p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-growstats-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ArrowRight className="text-growstats-purple" size={28} />
+              <div className="w-14 h-14 bg-growstats-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ArrowRight className="text-growstats-purple" size={24} />
               </div>
               <h3 className="font-bold text-lg mb-2">Career Growth</h3>
               <p className="text-gray-600">Clear paths for advancement and professional development opportunities</p>
@@ -71,15 +67,15 @@ const Careers = () => {
         </div>
       </section>
       
-      <section id="openings" className="section bg-white">
+      <section id="openings" className="py-12 md:py-16 bg-white">
         <div className="container-custom">
           <h2 className="text-2xl md:text-3xl font-bold font-display mb-4 text-center text-growstats-blue">Current Openings</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Discover your next career opportunity with us and join a team dedicated to excellence and innovation</p>
+          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Discover your next career opportunity with us and join a team dedicated to excellence and innovation</p>
           
-          <div className="grid gap-8">
+          <div className="grid gap-6 md:gap-8">
             <Card className="overflow-hidden transition-all hover:shadow-md">
               <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                   <div>
                     <Badge className="bg-growstats-red mb-2">Full-time</Badge>
                     <h3 className="text-xl font-bold mb-2">Senior Digital Marketing Specialist</h3>
@@ -111,7 +107,7 @@ const Careers = () => {
             
             <Card className="overflow-hidden transition-all hover:shadow-md">
               <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                   <div>
                     <Badge className="bg-growstats-red mb-2">Full-time</Badge>
                     <h3 className="text-xl font-bold mb-2">Web Developer</h3>
@@ -140,7 +136,7 @@ const Careers = () => {
             
             <Card className="overflow-hidden transition-all hover:shadow-md">
               <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                   <div>
                     <Badge className="bg-growstats-green mb-2">Part-time</Badge>
                     <h3 className="text-xl font-bold mb-2">Content Writer</h3>
@@ -170,7 +166,7 @@ const Careers = () => {
         </div>
       </section>
       
-      <section className="section bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom text-center">
           <h2 className="text-2xl md:text-3xl font-bold font-display mb-6">Don't See a Suitable Position?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
