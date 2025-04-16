@@ -47,7 +47,7 @@ const ServicesSection = () => {
       icon: <Code size={24} />,
       title: "Web Applications",
       description: "Powerful web applications that solve complex business problems and enhance productivity.",
-      link: "/services/web-development",
+      link: "/services/web-applications",
       color: "bg-indigo-50 text-indigo-600",
     },
   ];
