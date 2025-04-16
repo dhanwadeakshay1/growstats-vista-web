@@ -6,15 +6,10 @@ import { useToast } from "@/hooks/use-toast";
 import { createClient } from "@supabase/supabase-js";
 import { Mail } from "lucide-react";
 
-// Initialize Supabase client with proper error handling
-let supabase = null;
+// Initialize Supabase client
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-// Only create the client if both URL and key are available
-if (supabaseUrl && supabaseAnonKey) {
-  supabase = createClient(supabaseUrl, supabaseAnonKey);
-}
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const NewsletterSubscription = () => {
   const { toast } = useToast();
@@ -29,11 +24,6 @@ const NewsletterSubscription = () => {
       // Validate email format
       if (!email || !email.includes('@') || !email.includes('.')) {
         throw new Error("Please enter a valid email address");
-      }
-
-      // Check if Supabase is initialized
-      if (!supabase) {
-        throw new Error("Database connection not available");
       }
 
       // Insert into Supabase newsletter_subscribers table
