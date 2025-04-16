@@ -4,37 +4,11 @@ import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/ui/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Check, Award, TrendingUp, Users } from "lucide-react";
+import { Check, Award, TrendingUp, Users, BarChart, BookOpen, Zap, Globe } from "lucide-react";
 import ContactCTA from "@/components/home/ContactCTA";
+import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
-  const team = [
-    {
-      name: "Rahul Khanna",
-      position: "Founder & CEO",
-      bio: "With over 15 years of experience in digital marketing, Rahul founded GrowStats with a vision to help businesses leverage data to drive growth.",
-      image: "https://randomuser.me/api/portraits/men/32.jpg"
-    },
-    {
-      name: "Priya Sharma",
-      position: "Head of Digital Marketing",
-      bio: "Priya brings 8 years of expertise in developing data-driven marketing strategies that deliver measurable results for clients.",
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-    {
-      name: "Vikram Patel",
-      position: "Technical Director",
-      bio: "Vikram leads our development team, ensuring high-quality website and application development for our clients.",
-      image: "https://randomuser.me/api/portraits/men/62.jpg"
-    },
-    {
-      name: "Anita Roy",
-      position: "SEO Specialist",
-      bio: "Anita has helped numerous businesses improve their search visibility and drive organic traffic through effective SEO strategies.",
-      image: "https://randomuser.me/api/portraits/women/68.jpg"
-    }
-  ];
-
   return (
     <Layout>
       <PageHeader
@@ -48,10 +22,10 @@ const About = () => {
             <div>
               <h2 className="heading-2 mb-6">Our Story</h2>
               <p className="body-text mb-6">
-                Founded in 2013, GrowStats Media began as a small team of passionate digital marketers with a vision to help businesses leverage the power of data to drive growth. Our journey started in a small office in Pune with just three team members and a handful of clients.
+                Founded in 2022, GrowStats Media began as a small team of passionate digital marketers with a vision to help businesses leverage the power of data to drive growth. Our journey started in a small office in Pune with just three team members and a handful of clients.
               </p>
               <p className="body-text mb-6">
-                Over the years, we've grown into a full-service digital marketing and web development agency, working with clients across various industries throughout India and beyond. Today, our diverse team of 25+ experts continues to deliver innovative digital solutions that help businesses thrive in the ever-evolving digital landscape.
+                Over the years, we've grown into a full-service digital marketing and web development agency, working with clients across various industries throughout India and beyond. Today, our diverse team of 19+ experts continues to deliver innovative digital solutions that help businesses thrive in the ever-evolving digital landscape.
               </p>
               <p className="body-text mb-8">
                 What sets us apart is our data-driven approach and commitment to transparency. We believe in forming lasting partnerships with our clients, focusing not just on immediate results but on long-term sustainable growth.
@@ -59,19 +33,19 @@ const About = () => {
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <p className="font-display font-bold text-3xl text-growstats-700">200+</p>
+                  <p className="font-display font-bold text-3xl text-growstats-700">90+</p>
                   <p className="text-muted-foreground">Projects Completed</p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <p className="font-display font-bold text-3xl text-growstats-700">150+</p>
+                  <p className="font-display font-bold text-3xl text-growstats-700">85+</p>
                   <p className="text-muted-foreground">Happy Clients</p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <p className="font-display font-bold text-3xl text-growstats-700">10+</p>
+                  <p className="font-display font-bold text-3xl text-growstats-700">2+</p>
                   <p className="text-muted-foreground">Years Experience</p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <p className="font-display font-bold text-3xl text-growstats-700">25+</p>
+                  <p className="font-display font-bold text-3xl text-growstats-700">19+</p>
                   <p className="text-muted-foreground">Team Members</p>
                 </div>
               </div>
@@ -180,29 +154,60 @@ const About = () => {
       <section className="section">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="heading-2 mb-4">Meet Our Team</h2>
+            <h2 className="heading-2 mb-4">Our Expertise</h2>
             <p className="subheading">
-              The passionate professionals behind GrowStats Media's success.
+              We deliver exceptional results across multiple digital disciplines
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
-                <div className="p-6">
-                  <h3 className="font-semibold text-xl mb-1">{member.name}</h3>
-                  <p className="text-accent-700 mb-3">{member.position}</p>
-                  <p className="text-muted-foreground text-sm">{member.bio}</p>
+            <Card className="border-t-4 border-t-growstats-600">
+              <CardContent className="pt-6">
+                <div className="mb-4 h-12 w-12 rounded-lg bg-growstats-100 flex items-center justify-center text-growstats-700">
+                  <BarChart size={24} />
                 </div>
-              </div>
-            ))}
-          </div>
+                <h3 className="font-semibold text-xl mb-2">Data Analytics</h3>
+                <p className="text-muted-foreground">
+                  We transform raw data into actionable insights that drive real business growth and help you make informed decisions.
+                </p>
+              </CardContent>
+            </Card>
 
-          <div className="text-center mt-12">
-            <Button asChild>
-              <Link to="/careers">Join Our Team</Link>
-            </Button>
+            <Card className="border-t-4 border-t-accent-600">
+              <CardContent className="pt-6">
+                <div className="mb-4 h-12 w-12 rounded-lg bg-accent-100 flex items-center justify-center text-accent-700">
+                  <Globe size={24} />
+                </div>
+                <h3 className="font-semibold text-xl mb-2">Web Development</h3>
+                <p className="text-muted-foreground">
+                  Our development team creates beautiful, functional websites and applications that engage your audience and drive conversions.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-t-4 border-t-growstats-600">
+              <CardContent className="pt-6">
+                <div className="mb-4 h-12 w-12 rounded-lg bg-growstats-100 flex items-center justify-center text-growstats-700">
+                  <Zap size={24} />
+                </div>
+                <h3 className="font-semibold text-xl mb-2">Digital Marketing</h3>
+                <p className="text-muted-foreground">
+                  We develop comprehensive digital marketing strategies that increase your visibility and help you connect with your target audience.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-t-4 border-t-accent-600">
+              <CardContent className="pt-6">
+                <div className="mb-4 h-12 w-12 rounded-lg bg-accent-100 flex items-center justify-center text-accent-700">
+                  <BookOpen size={24} />
+                </div>
+                <h3 className="font-semibold text-xl mb-2">Content Strategy</h3>
+                <p className="text-muted-foreground">
+                  Our content experts create engaging, valuable content that resonates with your audience and supports your business goals.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

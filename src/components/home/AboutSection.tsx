@@ -15,7 +15,7 @@ const AboutSection = () => {
               className="rounded-lg shadow-2xl"
             />
             <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-lg shadow-lg hidden md:block">
-              <p className="text-3xl font-bold font-display text-growstats-700">10+</p>
+              <p className="text-3xl font-bold font-display text-growstats-700">2+</p>
               <p className="text-sm text-gray-600">Years of Experience</p>
             </div>
           </div>
