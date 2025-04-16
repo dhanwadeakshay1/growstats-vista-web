@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import PageHeader from '../components/ui/PageHeader';
@@ -11,7 +10,7 @@ const Careers = () => {
   return (
     <Layout>
       <PageHeader 
-        title="Join Our Team" 
+        title="" 
         subtitle=""
       />
 
@@ -187,4 +186,3 @@ const Careers = () => {
 };
 
 export default Careers;
-
