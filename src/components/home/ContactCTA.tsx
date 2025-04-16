@@ -20,7 +20,7 @@ const ContactCTA = () => {
               <Button asChild size="lg" className="bg-white text-growstats-red hover:bg-white/90">
                 <Link to="/contact">Contact Us</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-white border-white hover:bg-white/10 group">
+              <Button asChild variant="outline" size="lg" className="text-growstats-red border-white hover:bg-white/10 group">
                 <Link to="/services" className="flex items-center">
                   Our Services
                   <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
