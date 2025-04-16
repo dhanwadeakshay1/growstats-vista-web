@@ -25,7 +25,11 @@ const ServiceCard = ({ icon, title, description, link, iconColor = "bg-growstats
       </CardHeader>
       <CardContent className="flex flex-col flex-grow">
         <CardDescription className="mb-6 flex-grow text-gray-700">{description}</CardDescription>
-        <Button asChild variant="outline" className="self-start group/btn border-growstats-blue text-growstats-blue hover:bg-growstats-blue/10 hover:text-growstats-blue">
+        <Button 
+          asChild 
+          variant="outline" 
+          className="self-start group/btn border-growstats-blue text-growstats-blue hover:bg-growstats-blue/10 hover:text-growstats-blue"
+        >
           <Link to={link} className="flex items-center">
             Learn More
             <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
