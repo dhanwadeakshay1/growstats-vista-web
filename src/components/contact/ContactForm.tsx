@@ -61,6 +61,7 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="John Doe"
             required
+            className="focus:border-growstats-blue focus:ring-growstats-blue"
           />
         </div>
         <div className="space-y-2">
@@ -75,6 +76,7 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="john@example.com"
             required
+            className="focus:border-growstats-blue focus:ring-growstats-blue"
           />
         </div>
       </div>
@@ -90,6 +92,7 @@ const ContactForm = () => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(+91) 9876543210"
+            className="focus:border-growstats-blue focus:ring-growstats-blue"
           />
         </div>
         <div className="space-y-2">
@@ -103,6 +106,7 @@ const ContactForm = () => {
             onChange={handleChange}
             placeholder="How can we help you?"
             required
+            className="focus:border-growstats-blue focus:ring-growstats-blue"
           />
         </div>
       </div>
@@ -119,10 +123,11 @@ const ContactForm = () => {
           placeholder="Write your message here..."
           required
           rows={6}
+          className="focus:border-growstats-blue focus:ring-growstats-blue"
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+      <Button type="submit" size="lg" className="w-full bg-growstats-red hover:bg-growstats-red/90" disabled={isSubmitting}>
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
     </form>

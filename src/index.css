@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -115,18 +116,18 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-all;
+    @apply bg-growstats-red text-white hover:bg-growstats-red/90 px-6 py-3 rounded-md font-medium transition-all;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-md font-medium transition-all;
+    @apply bg-growstats-blue text-white hover:bg-growstats-blue/80 px-6 py-3 rounded-md font-medium transition-all;
   }
   
   .btn-accent {
-    @apply bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-md font-medium transition-all;
+    @apply bg-growstats-green text-white hover:bg-growstats-green/90 px-6 py-3 rounded-md font-medium transition-all;
   }
   
   .btn-outline {
-    @apply border border-input hover:bg-accent hover:text-accent-foreground px-6 py-3 rounded-md font-medium transition-all;
+    @apply border border-input hover:bg-growstats-light hover:text-growstats-purple px-6 py-3 rounded-md font-medium transition-all;
   }
 }

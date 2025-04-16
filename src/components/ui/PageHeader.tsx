@@ -10,7 +10,7 @@ interface PageHeaderProps {
 const PageHeader = ({
   title,
   subtitle,
-  bgClass = "bg-gradient-to-r from-growstats-700 to-growstats-900",
+  bgClass = "bg-gradient-to-r from-growstats-red to-growstats-purple",
 }: PageHeaderProps) => {
   return (
     <section className={`${bgClass} py-20 md:py-28`}>

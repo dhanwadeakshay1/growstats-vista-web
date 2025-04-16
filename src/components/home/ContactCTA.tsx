@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 const ContactCTA = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-growstats-700 to-accent-700 text-white">
+    <section className="py-16 bg-gradient-to-r from-growstats-red to-growstats-purple text-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
@@ -17,7 +17,7 @@ const ContactCTA = () => {
               Get in touch with our team for a free consultation and discover how our digital marketing solutions can help your business thrive.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-white text-growstats-700 hover:bg-white/90">
+              <Button asChild size="lg" className="bg-white text-growstats-red hover:bg-white/90">
                 <Link to="/contact">Contact Us</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-white border-white hover:bg-white/10 group">
