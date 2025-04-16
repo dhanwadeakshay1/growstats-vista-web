@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -234,15 +233,20 @@ const Careers = () => {
         </div>
       </section>
 
-      <section className="section bg-gradient-to-r from-growstats-700 to-accent-700 text-white">
+      <section className="section bg-gradient-to-r from-growstats-purple to-secondary-700 text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-display mb-6 text-white">
             Ready to Join Our Team?
           </h2>
-          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Explore our current openings and take the next step in your career journey with GrowStats Media.
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+            Explore our current openings and take the next step in your career journey with GrowStats Media. 
+            We're always looking for talented individuals who are passionate about digital marketing and web development.
           </p>
-          <Button asChild size="lg" className="bg-white text-growstats-700 hover:bg-white/90">
+          <Button 
+            asChild 
+            size="lg" 
+            className="bg-white text-growstats-purple hover:bg-gray-100 transition-colors duration-300"
+          >
             <a href="#openings">View All Openings</a>
           </Button>
         </div>
