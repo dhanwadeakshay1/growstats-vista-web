@@ -158,7 +158,7 @@ const Blog = () => {
       <PageHeader
         title="Blog & Resources"
         subtitle="Insights, strategies, and industry updates from our digital marketing experts"
-        bgClass="bg-gradient-to-r from-growstats-purple to-growstats-blue"
+        bgClass="section bg-gradient-to-r from-growstats-red to-growstats-purple text-white"
       />
 
       <section className="section bg-gray-50">
