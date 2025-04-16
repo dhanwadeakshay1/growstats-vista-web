@@ -12,7 +12,7 @@ const Careers = () => {
     <Layout>
       <PageHeader 
         title="Join Our Team" 
-        subtitle="Build your career with a company that's passionate about digital marketing and innovation."
+        subtitle=""
       />
 
       <section className="section bg-gradient-to-r from-growstats-red to-growstats-purple text-white">
@@ -187,3 +187,4 @@ const Careers = () => {
 };
 
 export default Careers;
+
