@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { createClient } from "@supabase/supabase-js";
+
+// Initialize Supabase client
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -21,13 +27,28 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // This would be replaced with an actual API call in a real application
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
+    try {
+      // Add timestamp to the form data
+      const contactData = {
+        ...formData,
+        created_at: new Date().toISOString(),
+        status: "new",
+      };
+
+      // Insert into Supabase contacts table
+      const { error } = await supabase
+        .from('contacts')
+        .insert([contactData]);
+
+      if (error) {
+        throw error;
+      }
+
+      // Show success message
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you as soon as possible.",
@@ -43,8 +64,16 @@ const ContactForm = () => {
         message: "",
       });
       
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Unable to submit your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (

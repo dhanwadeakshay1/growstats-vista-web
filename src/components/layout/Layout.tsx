@@ -1,21 +1,19 @@
 
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Footer from "./FooterWithNewsletter";
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="min-h-screen pt-16">
-        {children}
-      </main>
+      <main className="flex-grow">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 
