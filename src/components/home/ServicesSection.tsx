@@ -68,7 +68,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild size="lg" className="bg-growstats-red hover:bg-growstats-red/90 text-white">
+          <Button asChild size="lg" className="bg-growstats-red hover:bg-growstats-red/90 text-white font-medium">
             <Link to="/services">View All Services</Link>
           </Button>
         </div>
