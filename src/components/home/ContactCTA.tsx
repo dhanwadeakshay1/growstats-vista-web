@@ -10,7 +10,7 @@ const ContactCTA = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+            <h2 className="text-3xl md:text-4xl text-growstats-red font-bold font-display mb-4">
               Ready to Grow Your Business?
             </h2>
             <p className="text-lg text-white/80 mb-6">
