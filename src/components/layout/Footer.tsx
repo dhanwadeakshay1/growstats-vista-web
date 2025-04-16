@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
@@ -5,8 +6,11 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "luc
 const Footer = () => {
   const [logoError, setLogoError] = React.useState(false);
 
-  const handleLogoError = () => {
-    console.error('Logo failed to load in Footer');
+  const handleLogoError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    console.error('Logo failed to load in Footer', {
+      src: e.currentTarget.src,
+      alt: e.currentTarget.alt
+    });
     setLogoError(true);
   };
 

@@ -32,8 +32,11 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
-  const handleLogoError = () => {
-    console.error('Logo failed to load');
+  const handleLogoError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    console.error('Logo failed to load', {
+      src: e.currentTarget.src,
+      alt: e.currentTarget.alt
+    });
     setLogoError(true);
   };
 
