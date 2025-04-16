@@ -13,7 +13,7 @@ const ContactCTA = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
               Ready to Grow Your Business?
             </h2>
-            <p className="text-lg text-white/80 mb-6">
+            <p className="text-lg text-black/80 mb-6">
               Get in touch with our team for a free consultation and discover how our digital marketing solutions can help your business thrive.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
