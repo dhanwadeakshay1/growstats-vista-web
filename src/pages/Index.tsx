@@ -4,7 +4,7 @@ import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import AboutSection from "@/components/home/AboutSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
+import AchievementsSection from "@/components/home/AchievementsSection";
 import ContactCTA from "@/components/home/ContactCTA";
 
 const Index = () => {
@@ -13,7 +13,7 @@ const Index = () => {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
-      <TestimonialsSection />
+      <AchievementsSection />
       <ContactCTA />
     </Layout>
   );
