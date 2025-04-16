@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -45,13 +44,13 @@ const Navbar = () => {
       <nav className="container-custom flex items-center justify-between py-4">
         <Link to="/" className="flex items-center space-x-2">
           {logoError ? (
-            <span className="text-2xl font-bold font-display">GrowStats</span>
+            <span className="text-2xl font-bold text-growstats-red font-display">GrowStats</span>
           ) : (
             <img 
               src="/logo.png" 
               alt="Growstats Media Logo" 
               onError={handleLogoError}
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           )}
         </Link>
