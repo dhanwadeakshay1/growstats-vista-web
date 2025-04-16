@@ -46,11 +46,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="section bg-gray-50">
+    <section className="section bg-growstats-light">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="heading-2 mb-4">Our Services</h2>
-          <p className="subheading">
+          <h2 className="heading-2 mb-4 text-growstats-purple">Our Services</h2>
+          <p className="subheading text-gray-700">
             We offer comprehensive digital solutions to help your business grow and succeed in the digital landscape.
           </p>
         </div>
@@ -68,7 +68,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="bg-growstats-red hover:bg-growstats-red/90 text-white">
             <Link to="/services">View All Services</Link>
           </Button>
         </div>

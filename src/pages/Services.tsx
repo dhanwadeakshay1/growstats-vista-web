@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -23,29 +22,29 @@ const ServiceItem = ({
   benefits,
   link,
 }: ServiceItemProps) => (
-  <Card className="card-shadow h-full">
+  <Card className="card-shadow h-full bg-white">
     <CardHeader>
-      <div className="h-14 w-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
+      <div className="h-14 w-14 rounded-lg bg-growstats-red/10 flex items-center justify-center text-growstats-red mb-4">
         {icon}
       </div>
-      <CardTitle className="text-2xl font-display">{title}</CardTitle>
-      <CardDescription className="text-base mt-2">{description}</CardDescription>
+      <CardTitle className="text-2xl font-display text-growstats-purple">{title}</CardTitle>
+      <CardDescription className="text-base mt-2 text-gray-600">{description}</CardDescription>
     </CardHeader>
     <CardContent>
-      <h4 className="font-semibold mb-2">Key Benefits:</h4>
+      <h4 className="font-semibold mb-2 text-growstats-blue">Key Benefits:</h4>
       <ul className="space-y-1 mb-6">
         {benefits.map((benefit, i) => (
           <li key={i} className="flex items-start space-x-2">
-            <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+            <div className="h-5 w-5 rounded-full bg-growstats-green/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-growstats-green" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
-            <span>{benefit}</span>
+            <span className="text-gray-700">{benefit}</span>
           </li>
         ))}
       </ul>
-      <Button asChild variant="outline" className="w-full">
+      <Button asChild variant="outline" className="w-full border-growstats-blue text-growstats-blue hover:bg-growstats-blue/10">
         <Link to={link}>Learn More</Link>
       </Button>
     </CardContent>
@@ -165,13 +164,14 @@ const Services = () => {
       <PageHeader
         title="Our Services"
         subtitle="Comprehensive digital marketing and web development solutions tailored to your business needs"
+        bgClass="bg-gradient-to-r from-growstats-red to-growstats-purple"
       />
 
-      <section className="section">
+      <section className="section bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="heading-3 mb-4">Tailored Solutions for Your Business Growth</h2>
-            <p className="body-text">
+            <h2 className="heading-3 mb-4 text-growstats-purple">Tailored Solutions for Your Business Growth</h2>
+            <p className="body-text text-gray-700">
               At GrowStats Media, we offer a comprehensive range of digital services designed to help your business thrive in the digital landscape. Whether you're looking to increase your online visibility, generate more leads, or create a stunning website, we have the expertise to help you achieve your goals.
             </p>
           </div>
@@ -184,54 +184,54 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="section bg-gray-50">
+      <section className="section bg-growstats-light">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-2 mb-6">Our Approach</h2>
-              <p className="body-text mb-6">
+              <h2 className="heading-2 mb-6 text-growstats-purple">Our Approach</h2>
+              <p className="body-text mb-6 text-gray-700">
                 We believe in a transparent, collaborative approach to every project. Our team works closely with you to understand your unique business needs and develop tailored strategies that deliver results.
               </p>
 
               <div className="space-y-4 mb-8">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="h-8 w-8 rounded-full bg-growstats-100 flex items-center justify-center text-growstats-700">
+                    <div className="h-8 w-8 rounded-full bg-growstats-red/10 flex items-center justify-center text-growstats-red">
                       1
                     </div>
-                    <h3 className="font-semibold">Discovery & Analysis</h3>
+                    <h3 className="font-semibold text-growstats-purple">Discovery & Analysis</h3>
                   </div>
-                  <p className="pl-11">Understanding your business objectives, target audience, and current digital presence.</p>
+                  <p className="pl-11 text-gray-600">Understanding your business objectives, target audience, and current digital presence.</p>
                 </div>
                 
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="h-8 w-8 rounded-full bg-growstats-100 flex items-center justify-center text-growstats-700">
+                    <div className="h-8 w-8 rounded-full bg-growstats-red/10 flex items-center justify-center text-growstats-red">
                       2
                     </div>
-                    <h3 className="font-semibold">Strategy Development</h3>
+                    <h3 className="font-semibold text-growstats-purple">Strategy Development</h3>
                   </div>
-                  <p className="pl-11">Creating a customized plan to achieve your specific goals and objectives.</p>
+                  <p className="pl-11 text-gray-600">Creating a customized plan to achieve your specific goals and objectives.</p>
                 </div>
                 
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="h-8 w-8 rounded-full bg-growstats-100 flex items-center justify-center text-growstats-700">
+                    <div className="h-8 w-8 rounded-full bg-growstats-red/10 flex items-center justify-center text-growstats-red">
                       3
                     </div>
-                    <h3 className="font-semibold">Implementation</h3>
+                    <h3 className="font-semibold text-growstats-purple">Implementation</h3>
                   </div>
-                  <p className="pl-11">Executing the strategy with precision, creativity, and attention to detail.</p>
+                  <p className="pl-11 text-gray-600">Executing the strategy with precision, creativity, and attention to detail.</p>
                 </div>
                 
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="h-8 w-8 rounded-full bg-growstats-100 flex items-center justify-center text-growstats-700">
+                    <div className="h-8 w-8 rounded-full bg-growstats-red/10 flex items-center justify-center text-growstats-red">
                       4
                     </div>
-                    <h3 className="font-semibold">Monitoring & Optimization</h3>
+                    <h3 className="font-semibold text-growstats-purple">Monitoring & Optimization</h3>
                   </div>
-                  <p className="pl-11">Continuously analyzing performance and making data-driven adjustments for optimal results.</p>
+                  <p className="pl-11 text-gray-600">Continuously analyzing performance and making data-driven adjustments for optimal results.</p>
                 </div>
               </div>
             </div>
