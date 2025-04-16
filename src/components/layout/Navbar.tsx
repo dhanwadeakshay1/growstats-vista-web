@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,7 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,15 +32,25 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
+  const handleLogoError = () => {
+    console.error('Logo failed to load');
+    setLogoError(true);
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-transparent"}`}>
       <nav className="container-custom flex items-center justify-between py-4">
         <Link to="/" className="flex items-center space-x-2">
-          <img 
-            src="/logo.png" 
-            alt="Growstats Media Logo" 
-            className="h-10 w-auto object-contain"
-          />
+          {logoError ? (
+            <span className="text-2xl font-bold font-display">GrowStats</span>
+          ) : (
+            <img 
+              src="/logo.png" 
+              alt="Growstats Media Logo" 
+              onError={handleLogoError}
+              className="h-10 w-auto object-contain"
+            />
+          )}
         </Link>
 
         {/* Desktop Navigation */}

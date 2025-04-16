@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
+  const [logoError, setLogoError] = React.useState(false);
+
+  const handleLogoError = () => {
+    console.error('Logo failed to load in Footer');
+    setLogoError(true);
+  };
+
   return (
     <footer className="bg-gray-50 pt-16 pb-8">
       <div className="container-custom">
@@ -10,11 +17,16 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img 
-                src="/logo.png" 
-                alt="Growstats Media Logo" 
-                className="h-12 w-auto object-contain"
-              />
+              {logoError ? (
+                <span className="text-2xl font-bold font-display">GrowStats</span>
+              ) : (
+                <img 
+                  src="/logo.png" 
+                  alt="Growstats Media Logo" 
+                  onError={handleLogoError}
+                  className="h-12 w-auto object-contain"
+                />
+              )}
             </Link>
             <p className="text-muted-foreground mb-4">
               Empowering businesses with cutting-edge digital marketing solutions and web development services.
